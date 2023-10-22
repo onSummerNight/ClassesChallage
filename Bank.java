@@ -6,6 +6,26 @@ public class Bank {
     private String email;
     private String phoneNumber;
 
+    public Bank(String customerName, String email, String phoneNumber) {
+        this("99999",100.55,customerName,email,phoneNumber);
+//        this.customerName = customerName;
+//        this.email = email;
+//        this.phoneNumber = phoneNumber;
+    }
+
+    public Bank(){
+        this("66112",2.5,"Default Duck","Default Email","Default Phone");
+        System.out.println("Empty constructor called");
+    }
+
+    public Bank(String accountNumber, double accountBalance, String customerName, String email, String phoneNumber){
+        System.out.println("Bank constructor with parameters called");
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
     public String getAccountNumber() {
         return accountNumber;
     }

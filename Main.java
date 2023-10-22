@@ -1,14 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        Bank bank = new Bank();
+        //Bank duckBank = new Bank("12345678901",500,"Duck","duck@duck.org","081122334455");
+        Bank duckBank = new Bank();
 
-        bank.setAccountNumber("12345678901");
-        bank.setCustomerName("Duck");
-        bank.setEmail("duck@duck.org");
-        bank.setPhoneNumber("122334545");
-        bank.setAccountBalance(1000);
+        System.out.println(duckBank.getAccountNumber());
+        System.out.println(duckBank.getAccountBalance());
+//        duckBank.setAccountNumber("12345678901");
+//        duckBank.setCustomerName("Duck");
+//        duckBank.setEmail("duck@duck.org");
+//        duckBank.setPhoneNumber("122334545");
+//        duckBank.setAccountBalance(1000);
 
-        bank.deposit(10000);
-        bank.withdrawal(2000);
+        duckBank.deposit(10000);
+        duckBank.withdrawal(2000);
+
+        Bank newDuck = new Bank("New Duck","duckNew@duck.org","12345");
+
+        System.out.println("AccountNo: " + newDuck.getAccountNumber() + "; name " + newDuck.getCustomerName());
     }
 }
